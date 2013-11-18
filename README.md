@@ -1,4 +1,4 @@
-koo5 fixes what:
+koo 5 fixes (thanks to Thomeeque (http://www.c-n-c.cz/viewtopic.php?t=9925)) what:
 CNC-CLUB.ru (.com) Presents
 ===========================
 
