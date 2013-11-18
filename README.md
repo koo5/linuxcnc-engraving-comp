@@ -21,7 +21,7 @@ Into [HAL] section:
 POSTGUI_HALFILE = custom_postgui.hal
 
 Into [DISPLAY] section:
-PYVCP = comrensation_pyvcp.xml
+PYVCP = compensation_pyvcp.xml
 
 Operate
 ===================
