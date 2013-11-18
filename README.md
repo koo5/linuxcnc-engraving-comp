@@ -1,3 +1,4 @@
+koo5 fixes what:
 CNC-CLUB.ru (.com) Presents
 ===========================
 
@@ -25,38 +26,7 @@ PYVCP = comrensation_pyvcp.xml
 Operate
 ===================
 
-1. Scan the surface using Gcode like this:
-<pre>
-M64 P0  (turn off compensation)
-T1 M6 (Install probe)
-#&lt;h&gt; = 90 
-#&lt;w&gt; = 90 
-#&lt;x0&gt; = 110
-#&lt;y0&gt; = 90
-#&lt;step&gt; = 20
-#&lt;search_feed&gt; = 100
-#&lt;latch_feed&gt; = 1
-#&lt;safe_z&gt; = 3
-#&lt;search_z&gt; = -3
-(PROBEOPEN filename.txt)
-G0 #&lt;safe_z&gt;
-#&lt;y&gt; = #&lt;y0&gt;
-o101 while [#&lt;y&gt; LT #&lt;h&gt;+#&lt;y0&gt;]
-  #&lt;x&gt; = #&lt;x0&gt;
-  o102 while [#&lt;x&gt; LT #&lt;w&gt;+#&lt;x0&gt;]
-    G0 X#&lt;x&gt; Y#&lt;y&gt; 
-    F[#&lt;search_feed&gt;]
-    G38.3 [Z#&lt;search_z&gt;]
-    F[#&lt;latch_feed&gt;]
-    G38.5 [Z#&lt;safe_z&gt;]
-   G0 #&lt;safe_z&gt; 
-    #&lt;x&gt; = [#&lt;x&gt;+#&lt;step&gt;]
-  o102 endwhile
-  #&lt;y&gt; = [#&lt;y&gt;+#&lt;step&gt;]
-o101 endwhile
-(PROBECLOSE)
-</pre>
-
+1. Scan the surface using Gcode like in scan-surface.ngc
 2. Reset component's height map by pressing Reset button at pyvcp panel or throught Gcode
 M65 P1 (Reset compenstation)
 G4 P1
